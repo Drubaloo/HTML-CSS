@@ -1,6 +1,8 @@
+html{background-color: red;}
 .container{
     position: relative;
     width: 100%;
+    z-index: 1;
 }
 
 .anim{
@@ -11,9 +13,10 @@
 }
 .head{
     width: 52px;
-    height: 95px;
+    height: 75px;
     background-color: wheat;
     border-radius: 25px;
+    
     
 }
 .head::before{
@@ -59,6 +62,64 @@
     background-color: black;
     border-radius: 0% 0% 50% 50%;
     margin-left: 50%;
-    margin-top: -39%;
+    margin-top: -38%;
+}
+.neck{
+    width: 20px;
+    height: 10px;
+    background-color: wheat;
+    margin-left: 4.5%;
+    margin-top: -5px;
 
+}
+.shirt{
+    width: 85px;
+    height: 100px;
+    z-index: 0;
+    background-color: black;
+    margin-left: -5%;
+    border-radius: 25% 25% 5% 5%;
+}
+.logo{
+    background-image: url("../images/shirt-logo.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    float: initial;
+    margin-left: 20px;
+}
+.leftSleeve{
+    background-color: black;
+    width: 25px;
+    height: 50px;
+    transform: rotate(25deg);
+    margin-top: -99px;
+    margin-left: -15px;
+    border-radius: 50% 0% 25% 25%;
+}
+.rightSleeve{
+    background-color: black;
+    width: 30px;
+    height: 50px;
+    transform: rotate(-25deg);
+    margin-top: -57px;
+    margin-left: 65px;
+    border-radius: 0% 50% 25%;
+}
+.leftArm{
+    background-color: wheat;
+    width: 10px;
+    height: 75px;
+    transform: rotate(25deg);
+    margin-top: -57px;
+    margin-left: -30px;
+    border-radius: 0% 50% 25%;
+}
+.rightArm{
+    background-color: wheat;
+    width: 10px;
+    height: 75px;
+    transform: rotate(-25deg);
+    margin-top: -95px;
+    margin-left: 95px;
+    border-radius: 0% 50% 25%;
 }
