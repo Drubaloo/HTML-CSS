@@ -123,3 +123,17 @@ html{background-color: red;}
     margin-left: 95px;
     border-radius: 0% 50% 25%;
 }
+.pantsLeft{
+    width: 35px;
+    height: 125px;
+    background-color: blue;
+    margin-left: -10px;
+    border-right: 10px black;
+}
+.pantsRight{
+    width: 35px;
+    height: 125px;
+    background-color: blue;
+    margin-left: 28px;
+    margin-top: -125px;
+}
