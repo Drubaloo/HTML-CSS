@@ -8,7 +8,7 @@ let decreasingColor = "rgba(190, 40, 40, ratio)";
 // Set things up
 window.addEventListener("load", (event) => {
     //onload select the element you want to change
-    boxElement = document.querySelector(".hello1");
+    boxElement = document.querySelector(".hello5");
 
     createObserver();
 }, false);

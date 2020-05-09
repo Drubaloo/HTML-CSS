@@ -18,14 +18,15 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px;
-  }
+}
   
-  .vertical {
+.vertical {
     color: white;
     font: 32px "Arial";
-  }
+}
   
-  .extra {
+
+.extra {
     width: 350px;
     height: 350px;
     margin-top: 10px;
@@ -33,17 +34,18 @@ body{
     text-align: center;
     padding: 20px;
   }
-
-  .hello1{
+.hello5{
+  height: 50px;
+  width: 100%;
     
   }
 
-  .hello1.move{
-    animation: move 5s infinite;
+.hello5.move{
+    animation: move 5s;
   }
 
   @keyframes move{
-    0% {margin-left: 0px; background: red;}
-    50% {margin-left: 50px; background: yellow;}
-    100%{margin-left: 0px; background: red;}
+    0% {margin-right: 0%; background: red;}
+    50% {margin-left: 50%; background: yellow;}
+    100%{margin-left: 100%; background: red;}
   }
