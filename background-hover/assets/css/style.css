@@ -2,6 +2,23 @@ body{
   display: grid;
   justify-content: center;
   align-self: center;
+  background:
+linear-gradient(115deg, transparent 75%, #241c0c 75%) 0 0,
+linear-gradient(245deg, transparent 75%, #241c0c 75%) 0 0,
+linear-gradient(115deg, transparent 75%, #241c0c 75%) 7px -15px,
+linear-gradient(245deg, transparent 75%, #241c0c 75%) 7px -15px,
+#2c1c13;
+background-size: 15px 30px;
+}
+
+body :hover{
+  background:
+linear-gradient(115deg, transparent 75%, #2e002e 75%) 0 0,
+linear-gradient(245deg, transparent 75%, #2e002e 75%) 0 0,
+linear-gradient(115deg, transparent 75%, #2e002e 75%) 7px -15px,
+linear-gradient(245deg, transparent 75%, #2e002e 75%) 7px -15px,
+#2c1c13;
+background-size: 30px 60px;
 }
 .container{
   width: 66%;
@@ -73,3 +90,5 @@ body{
     
     100%{margin-left: 125%; background: red;}
   }
+
+  
