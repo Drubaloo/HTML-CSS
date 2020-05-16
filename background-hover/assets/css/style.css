@@ -5,8 +5,7 @@ body{
   background:
 linear-gradient(115deg, transparent 75%, #241c0c 75%) 0 0,
 linear-gradient(245deg, transparent 75%, #241c0c 75%) 0 0,
-linear-gradient(115deg, transparent 75%, #241c0c 75%) 7px -15px,
-linear-gradient(245deg, transparent 75%, #241c0c 75%) 7px -15px,
+
 #2c1c13;
 background-size: 15px 30px;
 }
@@ -86,9 +85,9 @@ background-size: 30px 60px;
   }
 
   @keyframes move{
-    0% {margin-left: 0%; background: red;}
+    0% {margin-left: 0%; background: red; width: 100vw;}
     
-    100%{margin-left: 125%; background: red;}
+    100%{margin-left: 125%; background: blue; width: 100vw;}
   }
 
   
