@@ -2,24 +2,24 @@ body{
   display: grid;
   justify-content: center;
   align-self: center;
-  background:
+  /* background:
 linear-gradient(115deg, transparent 75%, #241c0c 75%) 0 0,
 linear-gradient(245deg, transparent 75%, #241c0c 75%) 0 0,
 linear-gradient(115deg, transparent 75%, #241c0c 75%) 7px -15px,
 linear-gradient(245deg, transparent 75%, #241c0c 75%) 7px -15px,
 #2c1c13;
-background-size: 15px 30px;
+background-size: 15px 30px; */
 }
 
-body :hover{
+/* body :hover{
   background:
 linear-gradient(115deg, transparent 75%, #2e002e 75%) 0 0,
 linear-gradient(245deg, transparent 75%, #2e002e 75%) 0 0,
 linear-gradient(115deg, transparent 75%, #2e002e 75%) 7px -15px,
 linear-gradient(245deg, transparent 75%, #2e002e 75%) 7px -15px,
 #2c1c13;
-background-size: 30px 60px;
-}
+background-size: 15px 30px;
+} */
 .container{
   width: 66%;
   display: grid;
@@ -85,10 +85,31 @@ background-size: 30px 60px;
     animation: move 5s;
   }
 
-  @keyframes move{
+  /* @keyframes move{
     0% {margin-left: 0%; background: red;}
     
     100%{margin-left: 125%; background: red;}
+  } */
+
+  .buttons{
+    width: 25vw;
+    border: 2rem yellow;
+    border-radius: 10%;
+    background-color: black;
+    color: yellow;
+    grid-row: 1;
+    grid-column: 2;
   }
+
+  .buttons:hover{
+    background-color: blue;
+    animation: swipe 5s;
+
+  }
+
+  @keyframes swipe{
+    0%{background-image: linear-gradient(to right, #ff0000 , #ffff00)}
+    100%{background-image: linear-gradient(to right, blue , red) }
+    }
 
   
