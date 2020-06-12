@@ -1,7 +1,2 @@
 # HTML-CSS
 A testing ground for designing projects
-
-
-Of the Beginning of Days It is told among the wise that the First War began before Arda was full-shaped, and ere yet there was any thing that grew or walked upon earth; and for long Melkor had the upper hand. But in the midst of the war a spirit of great strength and hardihood came to the aid of the Valar, hearing in the far heaven that there was battle in the Little Kingdom; and Arda was filled with the sound of his laughter. So came Tulkas the Strong, whose anger passes like a mighty wind, scattering cloud and darkness before it; and Melkor fled before his wrath and his laughter, and forsook Arda, and there was peace for a long age. And Tulkas remained and became one of the Valar of the Kingdom of Arda; but Melkor brooded in the outer darkness, and his hate was given to Tulkas for ever after.
-
-In that time the Valar brought order to the seas and the lands and the mountains, and Yavanna planted at last the seeds that she had long devised. And since, when the fires were subdued or buried beneath the primeval hills, there was need of light, Aule at the prayer of Yavanna wrought two mighty lamps for the lighting of the Middle-earth which he had built amid the encircling seas. Then Varda filled the lamps and Manwe hallowed them, and the Valar set them upon high pillars, more lofty far than are any mountains of the later days. One lamp they
