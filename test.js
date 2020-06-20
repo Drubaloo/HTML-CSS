@@ -1,32 +1,30 @@
-const languages = [
-    {english: 'Welcome'},
-    {czech: 'Vitejte'},
-    {danish: 'Velkomst'},
-    {dutch: 'Welkom'},
-    {estonian: 'Tere tulemast'},
-    {finnish: 'Tervetuloa'},
-    {flemish: 'Welgekomen'},
-    {french: 'Bienvenue'},
-    {german: 'Willkommen'},
-    {irish: 'Failte'},
-    {italian: 'Benvenuto'},
-    {latvian: 'Gaidits'},
-    {lithuanian: 'Laukiamas'},
-    {polish: 'Witamy'},
-    {spanish: 'Bienvenido'},
-    {swedish: 'Valkommen'},
-    {welsh: 'Croeso'}
-]
+function getDrinkByProfession(param) {
+    var lower = param.toLowerCase()
+    switch (lower) {
+        case "jabroni":
+            return "Patron Tequila"
+            break;
+        case "school counselor":
+            return "Anything with Alcohol"
+            break;
+        case "Ppogrammer":
+            return "Hipster Craft Beer"
+            break;
+        case "bike gang member":
+            return "Moonshine"
+            break;
+        case "politician":
+            return "Your tax dolalrs"
+            break;
+        case "rapper":
+            return "Cristal"
+            break;
+        case "anything else":
+            return "Beer"
+            break;
 
-console.log(languages[0])
-function greet(language) {
-    for (let i = 0; i < languages.length; i++) {
-        
-        if (language = languages[i][0]) {
-            return language
-        } continue
     }
-
 }
 
-greet("french")
+
+getDrinkByProfession("bike ganG member")
