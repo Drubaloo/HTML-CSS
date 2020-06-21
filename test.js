@@ -1,11 +1,10 @@
-function roundToNext5(n){
-    for (var i=0; i <= 4; i++){
-    if ( n % 5 == 0 ){
-        console.log(n)
-     return n
-    } else n += 1
-    }
+function runningSums(nums) {
+    let result = []
 
-  }
+    for (let i = 0; i < nums.length -1; i++){
+        result.push(nums[i] += nums[i+1])
+    } return console.log(result)
 
-roundToNext5(1)
+}
+
+runningSums([1,2,3,4])
