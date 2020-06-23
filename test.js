@@ -1,10 +1,17 @@
-function runningSums(nums) {
-    let result = []
+function getCount(str) {
+    var vowelsCount = 0;
 
-    for (let i = 0; i < nums.length -1; i++){
-        result.push(nums[i] += nums[i+1])
-    } return console.log(result)
 
+    
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === "a" || "e" || "i" || "o" || "u") {
+            console.log(str[i])
+            vowelsCount += 1
+        }
+    }
+
+    return vowelsCount;
 }
 
-runningSums([1,2,3,4])
+
+getCount("o a kak ushakov lil vo kashu kakao")
