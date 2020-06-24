@@ -1,0 +1,62 @@
+.traffic-signal{
+    width: 300px;
+    height: 300px;
+}
+
+.main-rectangle{
+    background-color: black;
+    width: 115px;
+    height: 260px;
+    margin-top: 20px;
+}
+
+.main-rectangle--top{
+    background-color: red;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+   
+}
+
+.main-rectangle--left{
+    background-color: black;
+    width: 65px;
+    height: 65px;
+   
+    border-radius: 0 0 0 95%;
+    transform: translateX(-125%);
+}
+
+.main-rectangle--right{
+    background-color: black;
+    width: 65px;
+    height: 65px;
+    margin-left: 25px;
+    border-radius: 0 0 95% 0;
+
+}
+
+.main-rectangle--middle{
+    background-color: yellow;
+    margin-top: 90px;
+    margin-left: 20px;
+    
+    
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+   
+}
+
+.main-rectangle--bottom{
+    background-color: green;
+    margin-top: 175px;
+   
+    
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+   
+}
