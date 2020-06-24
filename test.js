@@ -1,17 +1,25 @@
-function getCount(str) {
-    var vowelsCount = 0;
 
+//get the middle value for a string
+function getMiddle(s) {
+    //setting position and length variables
+    let position;
+    let length;
 
-    
-    for (var i = 0; i < str.length; i++) {
-        if (str[i] === "a" || "e" || "i" || "o" || "u") {
-            console.log(str[i])
-            vowelsCount += 1
-        }
+    //checking to see if the string is even or odd
+    if (s.length % 2 == 1) {
+        //setting position equal to halway through the string
+        position = s.length / 2
+        //setting the length of the return equal to 1 for odd strings
+        length = 1
+    } else {
+        //setting position equal to the letter before the center
+        position = s.length / 2 - 1
+        //setting the length to return the 2 middle variables
+        length = 2
     }
 
-    return vowelsCount;
+    //returning the middle character(s)
+    return console.log(s.substring(position, position + length))
 }
 
 
-getCount("o a kak ushakov lil vo kashu kakao")
