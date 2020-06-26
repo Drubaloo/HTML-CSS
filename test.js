@@ -92,3 +92,5 @@ function alphabeticShift(inputString) {
 }
 
 alphabeticShift("crazy")
+
+acdefghijklmnopqrstuvwxyz
