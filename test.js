@@ -101,4 +101,15 @@ function squareDigits(num) {
 
 }
 
+function centuryFromYear(year) {
+    return Math.ceil(year/100); 
+}
 
+function checkPalindrome(inputString) {
+    var check = inputString.split("").reverse().join("")
+    if (inputString.toLowerCase() == check.toLowerCase()){
+        return true
+    } return false
+}
+
+checkPalindrome("raceca")
