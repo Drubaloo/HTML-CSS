@@ -88,7 +88,17 @@ function alphabeticShift(inputString) {
         }
     } return newString
 
-    
+
 }
 
-alphabeticShift("crazy")
+function squareDigits(num) {
+    let squared = ``
+    let numbers = num.toString()
+    for (let i = 0; i < numbers.length; i++) {
+        squared += (numbers[i] * numbers[i])
+    }
+    return parseInt(squared)
+
+}
+
+
