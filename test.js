@@ -121,4 +121,3 @@ function adjacentElementsProduct(inputArray) {
     } return check
    }
 
-adjacentElementsProduct([3, 6, -2, -5, 7, 3])
