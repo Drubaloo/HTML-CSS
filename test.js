@@ -102,22 +102,27 @@ function squareDigits(num) {
 }
 
 function centuryFromYear(year) {
-    return Math.ceil(year/100); 
+    return Math.ceil(year / 100);
 }
 
 function checkPalindrome(inputString) {
     var check = inputString.split("").reverse().join("")
-    if (inputString.toLowerCase() == check.toLowerCase()){
+    if (inputString.toLowerCase() == check.toLowerCase()) {
         return true
     } return false
 }
 
 function adjacentElementsProduct(inputArray) {
     let check = inputArray[0] * inputArray[1]
-    for (let i = 0; i < inputArray.length; i ++){
-        if(inputArray[i] * inputArray[i + 1] >= check){
+    for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i] * inputArray[i + 1] >= check) {
             check = inputArray[i] * inputArray[i + 1]
-        } 
+        }
     } return check
-   }
+}
 
+//a function to determin the shape area of a polygon
+function shapeArea(n) {
+    //adding the product of n to the power of 2 with n -1 to the power of 2
+        return Math.pow(n, 2) + Math.pow(n - 1, 2)
+}
