@@ -112,4 +112,13 @@ function checkPalindrome(inputString) {
     } return false
 }
 
-checkPalindrome("raceca")
+function adjacentElementsProduct(inputArray) {
+    let check = inputArray[0] * inputArray[1]
+    for (let i = 0; i < inputArray.length; i ++){
+        if(inputArray[i] * inputArray[i + 1] >= check){
+            check = inputArray[i] * inputArray[i + 1]
+        } 
+    } return check
+   }
+
+adjacentElementsProduct([3, 6, -2, -5, 7, 3])
