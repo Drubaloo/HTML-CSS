@@ -126,3 +126,6 @@ function shapeArea(n) {
     //adding the product of n to the power of 2 with n -1 to the power of 2
         return Math.pow(n, 2) + Math.pow(n - 1, 2)
 }
+
+
+asdfghjkl;
