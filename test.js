@@ -124,5 +124,21 @@ function adjacentElementsProduct(inputArray) {
 //a function to determin the shape area of a polygon
 function shapeArea(n) {
     //adding the product of n to the power of 2 with n -1 to the power of 2
-        return Math.pow(n, 2) + Math.pow(n - 1, 2)
+    return Math.pow(n, 2) + Math.pow(n - 1, 2)
 }
+
+
+function firstDuplicate(a) {
+
+    for (let i = 0; i < a.length; i++) {
+        let match = -1;
+        for (let j = 0; j < i + 1; i++) {
+            if (a[i] == a[j]) {
+                match = a[i]
+                return
+            } else continue
+        }
+
+    } return console.log(match)
+}
+firstDuplicate([2, 1, 3, 5, 3, 2])
