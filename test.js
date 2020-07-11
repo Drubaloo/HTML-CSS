@@ -134,11 +134,16 @@ function firstDuplicate(a) {
         let match = -1;
         for (let j = 0; j < i + 1; i++) {
             if (a[i] == a[j]) {
-                match = a[i]
-                return
-            } else continue
+                console.log(a[i])
+            } return
         }
 
     } return console.log(match)
 }
-firstDuplicate([2, 1, 3, 5, 3, 2])
+// firstDuplicate([2, 1, 3, 5, 3, 2])
+
+function makeArrayConsecutive2(statues) {
+    array.sort(statues);
+    return console.log(statues[statues.Length-1]-statues[0]-statues.Length+1)
+}
+makeArrayConsecutive2([6, 2, 3, 8])
