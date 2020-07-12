@@ -147,3 +147,5 @@ function makeArrayConsecutive2(statues) {
     return console.log(statues[statues.Length-1]-statues[0]-statues.Length+1)
 }
 makeArrayConsecutive2([6, 2, 3, 8])
+
+ASZFsdgv
