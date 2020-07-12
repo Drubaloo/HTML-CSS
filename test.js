@@ -148,4 +148,4 @@ function makeArrayConsecutive2(statues) {
 }
 makeArrayConsecutive2([6, 2, 3, 8])
 
-ASZ
+AS
