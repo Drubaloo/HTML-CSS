@@ -128,12 +128,15 @@ function shapeArea(n) {
 }
 
 function tripleX(str){
-    for(let i = 0; i < str.length; i++){
-        if(str[i] == "x" && str[i + 1] =="x"){
-            return console.log(true)
-        }
-    } return console.log(false)
-}
+    console.log(str)
+      for(let i = 0; i < str.length; i++){
+          if(str[i] == "x" && str[i + 1] == "x".toLowerCase()){
+              return true
+          } else if (str[i] == "x" && str[i + 1] !="x".toLowerCase()){
+            return false
+          }
+      } return false
+  }
 
 tripleX("abraxxxas")  
 
