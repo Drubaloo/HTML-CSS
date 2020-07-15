@@ -167,9 +167,9 @@ function highAndLow(numbers) {
 
     console.log(num)
     for (let i = 0; i <= num.length; i++) {
-        if (num[i] > high) {
+        if ((num[i] * 1) > high) {
             high = num[i]
-        } else if (num[i] < low) {
+        } else if ((num[i] * 1) < low) {
             low = num[i]
         } continue
     }
