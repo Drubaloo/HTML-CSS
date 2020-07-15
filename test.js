@@ -29,7 +29,7 @@ function descendingOrder(n) {
     return parseFloat(final)
 }
 
-console.log(descendingOrder(123456789))
+// console.log(descendingOrder(123456789))
 
 function addTwoDigits(n) {
     let numbers = n.toString().split("")
@@ -166,3 +166,19 @@ function highAndLow(numbers) {
 }
 
 // highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
+
+function findOdd(A) {
+    let count = 0
+    
+    for (let i = 0; i < A.length; i++){
+        if (first == true && second == true){
+            return A[i - 1]
+        }
+        for(let j = 0; j < A.lengthl j++){
+            if()
+        }
+    }
+    return 0;
+  }
+
+findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])
