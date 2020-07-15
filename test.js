@@ -23,24 +23,13 @@ function getMiddle(s) {
 }
 
 
-function highAndLow(numbers) {
-    let high = 0;
-    let low = 0;
-
-    for (let i = 0; i <= numbers.length; i++) {
-        if (numbers[i] > high) {
-            high = numbers[i]
-            console.log(numbers[i])
-        } else if (numbers[i] < low) {
-            low = numbers[i]
-        }
-    }
-    console.log(`${high},${low}`)
-    return `${high},${low}`
+function descendingOrder(n) {
+    let list = n.toString().split("")
+    let final = list.sort().reverse().join("")
+    return parseFloat(final)
 }
 
-
-// highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
+console.log(descendingOrder(123456789))
 
 function addTwoDigits(n) {
     let numbers = n.toString().split("")
@@ -176,4 +165,4 @@ function highAndLow(numbers) {
     return console.log(`${high},${low}`)
 }
 
-highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
+// highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
