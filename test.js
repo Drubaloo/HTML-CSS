@@ -127,18 +127,18 @@ function shapeArea(n) {
     return Math.pow(n, 2) + Math.pow(n - 1, 2)
 }
 
-function tripleX(str){
+function tripleX(str) {
     console.log(str)
-      for(let i = 0; i < str.length; i++){
-          if(str[i] == "x" && str[i + 1] == "x".toLowerCase()){
-              return true
-          } else if (str[i] == "x" && str[i + 1] !="x".toLowerCase()){
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == "x" && str[i + 1] == "x".toLowerCase()) {
+            return true
+        } else if (str[i] == "x" && str[i + 1] != "x".toLowerCase()) {
             return false
-          }
-      } return false
-  }
+        }
+    } return false
+}
 
-tripleX("abraxxxas")  
+// tripleX("abraxxxas")
 
 function firstDuplicate(a) {
 
@@ -156,7 +156,24 @@ function firstDuplicate(a) {
 
 function makeArrayConsecutive2(statues) {
     array.sort(statues);
-    return console.log(statues[statues.Length-1]-statues[0]-statues.Length+1)
+    return console.log(statues[statues.Length - 1] - statues[0] - statues.Length + 1)
 }
-makeArrayConsecutive2([6, 2, 3, 8])
+// makeArrayConsecutive2([6, 2, 3, 8])
 
+function highAndLow(numbers) {
+    let high = 0;
+    let low = 0;
+    let num = numbers.split(" ")
+
+    console.log(num)
+    for (let i = 0; i <= num.length; i++) {
+        if (num[i] > high) {
+            high = num[i]
+        } else if (num[i] < low) {
+            low = num[i]
+        } continue
+    }
+    return console.log(`${high},${low}`)
+}
+
+highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
