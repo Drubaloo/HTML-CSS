@@ -171,10 +171,10 @@ function findOdd(A) {
     let count = 0
     
     for (let i = 0; i < A.length; i++){
-        if (first == true && second == true){
-            return A[i - 1]
+        if (){
+            return 
         }
-        for(let j = 0; j < A.lengthl j++){
+        for(){
             if()
         }
     }
