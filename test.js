@@ -168,17 +168,21 @@ function highAndLow(numbers) {
 // highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
 
 function findOdd(A) {
-    let count = 0
-    
-    for (let i = 0; i < A.length; i++){
-        if (){
-            return 
+    let count = -1
+    let number;
+    for (let i = 0; i < A.length; i++) {
+        for (let j = 0; j < A.length; j++) {
+            if (A[i] == A[j]) {
+                count++
+                number = A[i]
+            }
         }
-        for(){
-            if()
-        }
+        if (count % 2 == 0) {
+            console.log(count)
+            return console.log(number)
+        } else count = -1
     }
-    return 0;
-  }
 
-findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])
+}
+
+findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
