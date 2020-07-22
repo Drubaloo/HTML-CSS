@@ -187,3 +187,12 @@ function findOdd(A) {
 
 //findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])
 
+function disemvowel(str) {
+    let myArray = str.split("")
+    let newStr = myArray.map(str => str.replace(/[aeiouAEIOU]/, "")).join("");
+
+     return console.log(newStr)
+};
+
+
+disemvowel("You suck chicken wings")
