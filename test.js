@@ -195,4 +195,4 @@ function disemvowel(str) {
 };
 
 
-//disemvowel("You suck chicken wings")
+disemvowel("You suck chicken wings")
