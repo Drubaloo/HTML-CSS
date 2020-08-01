@@ -196,4 +196,4 @@ function disemvowel(str) {
 
 
 //disemvowel("You suck chicken wings")
-fvkqebjhebfvlbwlvjbfwljkvbgljbvjksbewbvwefvkjbwvjkbwr bwrjvbjgfhbv
+fvkqebjhebfvlbwlvjbfwljkvbgljbvjksbewbvwefvkjbwvjkbwr bwr
