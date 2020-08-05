@@ -269,5 +269,3 @@ function DNAStrand(dna) {
 }
 
 //DNAStrand("AAAA")
-
-asf
