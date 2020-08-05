@@ -269,3 +269,5 @@ function DNAStrand(dna) {
 }
 
 //DNAStrand("AAAA")
+
+asfawsegsearghserhtsrjhrtjdtryjtydj
