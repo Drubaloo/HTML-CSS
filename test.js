@@ -196,3 +196,17 @@ function disemvowel(str) {
 
 
 //disemvowel("You suck chicken wings")
+
+
+function findShort(s){
+    let arr = s.split(" ")
+    let longer = 100
+    for(i = 0; i < arr.length; i++){
+        if(arr[i].length < longer){
+            longer = arr[i].length
+        }
+        
+    } return longer
+}
+
+findShort("turns out random test cases are easier than writing out basic ones")
