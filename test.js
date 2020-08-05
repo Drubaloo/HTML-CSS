@@ -209,4 +209,4 @@ function findShort(s){
     } return longer
 }
 
-findShort("turns out random test cases are easier than writing out basic ones")
+//findShort("turns out random test cases are easier than writing out basic ones")
