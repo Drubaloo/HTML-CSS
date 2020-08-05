@@ -210,3 +210,14 @@ function findShort(s){
 }
 
 //findShort("turns out random test cases are easier than writing out basic ones")
+
+const getNthDigit = (number, index) => {
+  let tempNumber = number;
+  let currentDigit = '';
+  for(let i = -1; i< index; i++){
+    currentDigit = Math.floor(tempNumber%10);
+    tempNumber /= 10;
+  }
+  return currentDigit;
+}
+console.log(getNthDigit(7204, 20));
