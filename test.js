@@ -191,8 +191,17 @@ function disemvowel(str) {
     let myArray = str.split("")
     let newStr = myArray.map(str => str.replace(/[aeiouAEIOU]/, "")).join("");
 
-     return console.log(newStr)
+    return console.log(newStr)
 };
 
 
 //disemvowel("You suck chicken wings")
+
+var isSquare = function (n) {
+    if (Math.sqrt(n) % 1 == 0){
+        return console.log(true)
+    }
+    return console.log(false); // fix me
+}
+
+isSquare(25)
