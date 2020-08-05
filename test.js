@@ -204,4 +204,4 @@ var isSquare = function (n) {
     return console.log(false); // fix me
 }
 
-isSquare(25)
+//isSquare(25)
