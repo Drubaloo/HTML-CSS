@@ -213,12 +213,34 @@ function isIsogram(str) {
     let arr = str.toLowerCase().split("")
 
     for (let i = 0; i < arr.length; i++) {
-        for (let j = i+1; j < arr.length; j++) {
+        for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] == arr[j]) {
-                return false            }
+                return false
+            }
         }
-        
-    }return true
+
+    } return true
 }
 
 //isIsogram("moOse")
+
+function XO(str) {
+    str = str.toLowerCase()
+    let x = 0
+    let o = 0
+    for (let i = 0; i < str.length; i++) {
+        switch (str[i]) {
+            case "x":
+                x++
+                break;
+            case "o":
+                o++
+                break;
+        }
+    }
+
+    if (x == o) {
+        return true
+    } return false
+}
+XO("xxOo")
