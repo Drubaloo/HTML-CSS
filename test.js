@@ -191,33 +191,105 @@ function disemvowel(str) {
     let myArray = str.split("")
     let newStr = myArray.map(str => str.replace(/[aeiouAEIOU]/, "")).join("");
 
-     return console.log(newStr)
+    return console.log(newStr)
 };
 
 
 //disemvowel("You suck chicken wings")
 
 
-function findShort(s){
+function findShort(s) {
     let arr = s.split(" ")
     let longer = 100
-    for(i = 0; i < arr.length; i++){
-        if(arr[i].length < longer){
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length < longer) {
             longer = arr[i].length
         }
-        
+
     } return longer
 }
 
 //findShort("turns out random test cases are easier than writing out basic ones")
 
 const getNthDigit = (number, index) => {
-  let tempNumber = number;
-  let currentDigit = '';
-  for(let i = -1; i< index; i++){
-    currentDigit = Math.floor(tempNumber%10);
-    tempNumber /= 10;
-  }
-  return currentDigit;
+    let tempNumber = number;
+    let currentDigit = '';
+    for (let i = -1; i < index; i++) {
+        currentDigit = Math.floor(tempNumber % 10);
+        tempNumber /= 10;
+    }
+    return currentDigit;
 }
 console.log(getNthDigit(7204, 20));
+var isSquare = function (n) {
+    if (Math.sqrt(n) % 1 == 0) {
+        return console.log(true)
+    }
+    return console.log(false); // fix me
+}
+
+//isSquare(25)
+
+function isIsogram(str) {
+    if (str.length == 0) {
+        return true
+    }
+    let arr = str.toLowerCase().split("")
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                return false
+            }
+        }
+
+    } return true
+}
+
+//isIsogram("moOse")
+
+function XO(str) {
+    str = str.toLowerCase()
+    let x = 0
+    let o = 0
+    for (let i = 0; i < str.length; i++) {
+        switch (str[i]) {
+            case "x":
+                x++
+                break;
+            case "o":
+                o++
+                break;
+        }
+    }
+
+    if (x == o) {
+        return true
+    } return false
+}
+//XO("xxOo")
+
+function DNAStrand(dna) {
+    let str = []
+    dna = dna.split("")
+    for (let i = 0; i < dna.length; i++) {
+        switch (dna[i]) {
+            case "A":
+                str.push("T")
+                break;
+            case "T":
+                str.push("A")
+                break;
+            case "C":
+                str.push("G")
+                break;
+            case "G":
+                str.push("C")
+                break;
+        }
+
+    } str = str.join("")
+    return console.log(str)
+}
+
+//DNAStrand("AAAA")
