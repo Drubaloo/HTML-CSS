@@ -243,4 +243,29 @@ function XO(str) {
         return true
     } return false
 }
-XO("xxOo")
+//XO("xxOo")
+
+function DNAStrand(dna) {
+    let str = []
+    dna = dna.split("")
+    for (let i = 0; i < dna.length; i++) {
+        switch (dna[i]) {
+            case "A":
+                str.push("T")
+                break;
+            case "T":
+                str.push("A")
+                break;
+            case "C":
+                str.push("G")
+                break;
+            case "G":
+                str.push("C")
+                break;
+        }
+
+    } str = str.join("")
+    return console.log(str)
+}
+
+//DNAStrand("AAAA")
