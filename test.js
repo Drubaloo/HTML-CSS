@@ -198,10 +198,27 @@ function disemvowel(str) {
 //disemvowel("You suck chicken wings")
 
 var isSquare = function (n) {
-    if (Math.sqrt(n) % 1 == 0){
+    if (Math.sqrt(n) % 1 == 0) {
         return console.log(true)
     }
     return console.log(false); // fix me
 }
 
 //isSquare(25)
+
+function isIsogram(str) {
+    if (str.length == 0) {
+        return true
+    }
+    let arr = str.toLowerCase().split("")
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i+1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                return false            }
+        }
+        
+    }return true
+}
+
+//isIsogram("moOse")
