@@ -329,5 +329,3 @@ function getSum(a, b) {
 }
 
 console.log(getSum(0, -1))
-
-hj
