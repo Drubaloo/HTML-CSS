@@ -303,3 +303,29 @@ function toJadenCase(str) {
 }
 
 //console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
+
+function getSum(a, b) {
+    let list = []
+    if (a == b) {
+        return a
+    } else if (a < b) {
+        for (let i = 0; i < b; i++) {
+            list.push(b[i])
+        }
+        let total = list[0]
+        for (let j = 1; j < list.length; j++) {
+            total = list[j] + total
+        } return console.log(total)
+    }
+    else if (a > b) {
+        for (let i = 0; i < a; i++) {
+            list.push(a[i])
+        }
+        let total = list[0]
+        for (let j = 1; j < list.length; j++) {
+            total = list[j] + total
+        } return console.log(total)
+    }
+}
+
+console.log(getSum(0, -1))
