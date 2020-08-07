@@ -220,7 +220,7 @@ const getNthDigit = (number, index) => {
     }
     return currentDigit;
 }
-console.log(getNthDigit(7204, 20));
+//console.log(getNthDigit(7204, 20));
 var isSquare = function (n) {
     if (Math.sqrt(n) % 1 == 0) {
         return console.log(true)
@@ -229,6 +229,7 @@ var isSquare = function (n) {
 }
 
 //isSquare(25)
+
 
 function isIsogram(str) {
     if (str.length == 0) {
@@ -268,7 +269,6 @@ function XO(str) {
     } return false
 }
 //XO("xxOo")
-
 function DNAStrand(dna) {
     let str = []
     dna = dna.split("")
@@ -293,3 +293,13 @@ function DNAStrand(dna) {
 }
 
 //DNAStrand("AAAA")
+
+function toJadenCase(str) {
+    str = str.split(" ")
+    for (let i = 0; i < str.length; i++) {
+        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+    }
+    return str.join(" ")
+}
+
+//console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
