@@ -309,26 +309,32 @@ function getSum(a, b) {
     if (a == b) {
         return a
     } else if (a < b) {
-        for (let i = 0; i < b; i++) {
-            list.push(b[i])
+        for (let i = a; i < b; i++) {
+            list.push(b - (b - i))
         }
         let total = list[0]
         for (let j = 1; j < list.length; j++) {
             total = list[j] + total
-        } return console.log(total)
+        } return total + b
     }
     else if (a > b) {
-        for (let i = 0; i < a; i++) {
-            list.push(a[i])
+        for (let i = b; i < a; i++) {
+            list.push(a - (a - i))
         }
         let total = list[0]
         for (let j = 1; j < list.length; j++) {
             total = list[j] + total
-        } return console.log(total)
+        } return total + a
     }
 }
 
-console.log(getSum(0, -1))
+//more efficient way >:(
+const GetSum = (a, b) => {
+    let min = Math.min(a, b),
+        max = Math.max(a, b);
+    return (max - min + 1) * (min + max) / 2;
+}
 
 
-slgsuhgblhsdgkjdsfbkljsd
+// console.log(getSum(-445, 175))
+// //-83835
