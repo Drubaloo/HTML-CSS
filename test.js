@@ -339,5 +339,3 @@ const GetSum = (a, b) => {
 // console.log(getSum(-445, 175))
 // //-83835
 
-
-asegaregeasrgaerg
