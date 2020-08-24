@@ -1,0 +1,115 @@
+body {
+    /* background: url(https://wallpaperaccess.com/full/923295.jpg); */
+    background-position: center;
+    background-size:cover;
+        height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    overflow: hidden;
+  }
+  
+  .menu-cont {
+    height: 40vh;
+     width: 40%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    background: white;
+  }
+  
+  .menu    {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+  }
+  
+  .line1, .line2 {
+      width: 40px;
+      height: 5px;
+      background: black;
+      margin: 2.5px 0;
+      transition: .5s;
+  }
+  
+  .line3 {
+      width: 40px;
+      height: 5px;
+      background: black;
+      margin: 2.5px 0;
+      transition: .5s;
+  }
+  
+  .line1-toggle {
+          width: 40px;
+      height: 20px;
+      background-image: linear-gradient(to right top, #c0c0c0, #a7a7a7, #7a7a7a, #555454, #4d4d4d);
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      transition: .5s;
+      border: 1px solid #00000047;;
+      position: relative;
+      z-index: 1;
+      animation: open 1s;
+      -webkit-animation-fill-mode: forwards;
+      margin-bottom: -1.2rem;
+  }
+  
+  .line1-toggle::after {
+         content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+
+  }
+  
+ .line2-toggle {
+      background-image: linear-gradient(to left, #41b0fa, #f1fd4e, #f7cc71, #faca45, #f78677);
+      height: 20rem;
+      border-top-right-radius: 100%;
+      border-top-left-radius: 100%;
+      border-bottom-left-radius: 100%;
+      border-bottom-right-radius: 100%;
+      transition: .5s;
+      transform: rotateY(360deg) rotate(90deg) translate(-27px, -5px);
+      border: 1px solid #00000047;;
+      position: relative;
+      z-index: 0;
+      width: 35px;
+      height: 20px;
+    margin-bottom: 2rem;
+    margin-right: .8rem;
+    animation: light 7s;
+  }
+  
+   .line3-toggle {  
+      width: 40px;
+      height: 50px;
+          background-image: linear-gradient(to right, #c0c0c0, #a7a7a7, #7a7a7a, #555454, #4d4d4d);
+      transition: .5s;
+      margin-top: -100%;
+      border: 1px solid #00000047;;
+      border-radius: 0% 0% 10% 10%;
+      position: relative;
+      z-index: 1;
+  }
+  
+ @keyframes open {
+    0% {
+      transform: none;
+    }
+    100% {
+        transform: rotate(-90deg) translate(1.4rem, -1.9rem);
+    }
+  }
+
+  @keyframes light {
+      0% {
+          opacity: 0%; 
+      }
+
+      100% {
+          opacity: 100%; 
+      }
+  }
