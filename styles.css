@@ -1,4 +1,14 @@
-.traffic-signal{
+html body{
+    background-image: linear-gradient(#CCD1D4, #BDC5C7, #C2C7CA, #C2C7CA, #5C8472, #BEC2C3);
+}
+
+.background{
+    /* background-image: url("./test.png"); */
+    min-width: 100vw;
+    background-image: linear-gradient(#CCD1D4, #BDC5C7, #C2C7CA, #C2C7CA, #5C8472, #BEC2C3);
+}
+
+/* .traffic-signal{
     width: 300px;
     height: 300px;
 }
@@ -59,4 +69,4 @@
     height: 75px;
     border-radius: 100%;
    
-}
+} */

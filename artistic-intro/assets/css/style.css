@@ -1,0 +1,22 @@
+body{
+  background-image: url(../background.jpg);
+  background: linear-gradient(0deg, #081f0a2c, #081f0a2c), url(../background.jpg) ;
+  background-size: cover;
+  display: grid;
+  }  
+
+.decoration{
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  grid-row: 2;
+  grid-column: 1;
+  margin-left: 4rem;
+  margin-top: 13rem;
+  justify-self: left;
+  align-self: left;
+  color: white;
+}
+
+.date{
+  font-size: 2rem;
+}
