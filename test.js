@@ -339,5 +339,18 @@ const GetSum = (a, b) => {
 // console.log(getSum(-445, 175))
 // //-83835
 
+function zero(a, b) {return function(x){return(a(b(0)))}}
+function one(a, b){return function(x){return(a(b(1)))}}
+
+function plus(c) {return + c}
+
+console.log(zero(plus(one())))
 
 
+document.getElementById("button").addEventListener("click", () => {
+
+})
+
+document.getElementById("butotn").click(() =>{
+    
+})
