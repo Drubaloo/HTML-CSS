@@ -7,37 +7,64 @@ var friends = "//Irongiant/2tb/Videos/Shows/Friends/Friends Season 1 COMPLETE 72
 var bigBang = "//Irongiant/2tb/Videos/Shows/The.Big.Bang.Theory.S01-S08.season.1-8.Complete.720p.HDTV.x264-MRSK[cttv]/The Big Bang Theory Season 1"
 var moveTo = "E:/Season 1"
 
-var officeEpisodes = []
-var friendsEpisodes = []
-var bigEpisodes = []
+var officeEpisodes = require("./officeEpisodes.json")
+var friendsEpisodes = require("./friendsEpisodes.json")
+var bigEpisodes = require("./bigBangEpisodes.json")
 
-// Loop through all the files in the temp directory
-fs.readdir(friends, function (err, files) {
-    if (err) { throw err }
-    files.forEach(function (ross, i) {
 
-        friendsEpisodes.push("hello")
+function makeJson() {
+    // Loop through all the files in the temp directory
+    fs.readdir(friends, function (err, files) {
+        if (err) { throw err }
+        files.forEach(function (ross, i) {
+            fs.appendFile("friendsEpisodes.json", `{"episode":"${friends}/${ross}"}, \n`, (err) => {
+                if (err) throw err
+            })
+            //friendsEpisodes.push("hello")
+        })
     })
-})
-fs.readdir(bigBang, (err, files) => {
-    if (err) { throw err }
-    files.forEach(function (bang, i) {
+    fs.readdir(bigBang, (err, files) => {
+        if (err) { throw err }
+        files.forEach(function (bang, i) {
 
-
-    })
-
-})
-fs.readdir(office, (err, files) => {
-    if (err) { throw err }
-    files.forEach(function (jims, i) {
+            fs.appendFile("bigBangEpisodes.json", `{"episode":"${bigBang}/${bang}"}, \n`, (err) => {
+                if (err) throw err
+            })
+        })
 
     })
-})
+    fs.readdir(office, (err, files) => {
+        if (err) { throw err }
+        files.forEach(function (jims, i) {
+            fs.appendFile("officeEpisodes.json", `{"episode":"${office}/${jims}"}, \n`, (err) => {
+                if (err) throw err
+            })
+        })
+    })
+}
 
 
-async function second() {
-    await start()
-    console.log(friendsEpisodes)
+
+for (i = 0; i < friendsEpisodes.length; i++) {
+    if (friendsEpisodes[i].episode == undefined ) {
+        continue
+    }else if (friendsEpisodes[i].episode != undefined && friendsEpisodes[i].episode.includes("friends_")) {
+        console.log(friendsEpisodes[i].episode)
+    };
+    if (bigEpisodes[i].episode == undefined) {
+        continue
+    } else if (bigEpisodes[i].episode != undefined && bigEpisodes[i].episode.includes("friends_")) {
+        console.log(bigEpisodes[i].episode)
+    };
+    if (officeEpisodes[i].episode == undefined) {
+        continue
+    } else if (officeEpisodes[i].episode != undefined && officeEpisodes[i].episode.includes("friends_")) {
+        console.log(officeEpisodes[i].episode)
+    };
+
+
+
+
 }
 
 
