@@ -1,15 +1,17 @@
 var fs = require('fs');
 var path = require('path');
 // In newer Node.js versions where process is already global this isn't necessary.
-var process = require("process");
-var office = "//Irongiant/2tb/Videos/Shows/The Office/Season.1";
-var friends = "//Irongiant/2tb/Videos/Shows/Friends/Friends Season 1 COMPLETE 720p.BRrip.sujaidr (pimprg)"
-var bigBang = "//Irongiant/2tb/Videos/Shows/The.Big.Bang.Theory.S01-S08.season.1-8.Complete.720p.HDTV.x264-MRSK[cttv]/The Big Bang Theory Season 1"
-var moveTo = "E:/Season 1"
+var process = require(`process`);
+var office = `//Irongiant/2tb/Videos/Shows/The Office/Season.1`;
+var friends = `//Irongiant/2tb/Videos/Shows/Friends/Friends Season 1 COMPLETE 720p.BRrip.sujaidr (pimprg)`
+var bigBang = `//Irongiant/2tb/Videos/Shows/The.Big.Bang.Theory.S01-S08.season.1-8.Complete.720p.HDTV.x264-MRSK[cttv]/The Big Bang Theory Season 1`
+var moveTo = `E:/Season-1`
 
-var officeEpisodes = require("./officeEpisodes.json")
-var friendsEpisodes = require("./friendsEpisodes.json")
-var bigEpisodes = require("./bigBangEpisodes.json")
+var officeEpisodes = require(`./officeEpisodes.json`)
+var friendsEpisodes = require(`./friendsEpisodes.json`)
+var bigEpisodes = require(`./bigBangEpisodes.json`)
+
+var fullList = require(`./episodeList.json`)
 
 
 function makeJson() {
@@ -44,24 +46,60 @@ function makeJson() {
 }
 
 
-for (i = 0; i < friendsEpisodes.length; i++) {
-    if (friendsEpisodes[i] == undefined) {
-        continue
-    } else if (friendsEpisodes[i].episode != undefined && friendsEpisodes[i].episode.includes("friends_s01")) {
-        console.log(friendsEpisodes[i].episode)
-    };
-    if (bigEpisodes[i] == undefined) {
-        continue
-    } else if (bigEpisodes[i].episode != undefined && bigEpisodes[i].episode.includes("The")) {
-        console.log(bigEpisodes[i].episode)
-    };
-    if (officeEpisodes[i] == undefined || officeEpisodes[i].episode == undefined) {
-        continue
-    } else if (officeEpisodes[i].episode != undefined && officeEpisodes[i].episode.includes("The")) {
-        console.log(officeEpisodes[i].episode)
-    };
+function makeFullList() {
+
+    for (i = 0; i < friendsEpisodes.length; i++) {
+        if (friendsEpisodes[i] == undefined) {
+            continue
+        } else if (friendsEpisodes[i].episode != undefined && friendsEpisodes[i].episode.includes("friends_s01")) {
+            console.log(friendsEpisodes[i].episode)
+            fs.appendFileSync("episodeList.json", `{"episode":"${friendsEpisodes[i].episode}"}, \n`, (err) => {
+                if (err) throw err
+            })
+            // fs.copyFile(friendsEpisodes[i].episode, `${moveTo}/${i += 100}.mkv`, function (error) {
+            //     if (error) {
+            //         console.error("File moving error.", error);
+            //     } 
+            // });
+            if (bigEpisodes[i] == undefined) {
+                continue
+            } else if (bigEpisodes[i].episode != undefined && bigEpisodes[i].episode.includes("The")) {
+                console.log(bigEpisodes[i].episode)
+
+
+                fs.appendFileSync("episodeList.json", `{"episode":"${bigEpisodes[i].episode}"}, \n`, (err) => {
+                    if (err) throw err
+                })
+                // fs.copyFile(bigEpisodes[i].episode, `${moveTo}/${i += 100}.mkv`, function (error) {
+                //     //         if (error) {
+                //     //             console.error("File moving error.", error);
+                // });
+            };
+            if (officeEpisodes[i] == undefined || officeEpisodes[i].episode == undefined) {
+                continue
+            } else if (officeEpisodes[i].episode != undefined && officeEpisodes[i].episode.includes("The")) {
+                console.log(officeEpisodes[i].episode)
+
+                fs.appendFileSync("episodeList.json", `{"episode":"${officeEpisodes[i].episode}"}, \n`, (err) => {
+                    if (err) throw err
+                })
+                // fs.copyFile(officeEpisodes[i].episode, `${moveTo}/${i += 100}.mkv`, function (error) {
+                //     //         if (error) {
+                //     //             console.error("File moving error.", error);
+                // });
+            };
+        }
+    }
 }
 
+
+fullList.forEach(function (file, i) {
+    fs.copyFile(file.episode, `${moveTo}/${i += 100}.mkv`, function (error) {
+        if (error) {
+            console.error("File moving error.", error);
+        }
+    })
+})
 
 
     // if (ross != undefined && ross.includes("friends_")) {
