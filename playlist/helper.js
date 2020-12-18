@@ -17,7 +17,7 @@ function makeJson() {
     fs.readdir(friends, function (err, files) {
         if (err) { throw err }
         files.forEach(function (ross, i) {
-            fs.appendFile("friendsEpisodes.json", `{"episode":"${friends}/${ross}"}, \n`, (err) => {
+            fs.appendFileSync("friendsEpisodes.json", `{"episode":"${friends}/${ross}"}, \n`, (err) => {
                 if (err) throw err
             })
             //friendsEpisodes.push("hello")
@@ -27,7 +27,7 @@ function makeJson() {
         if (err) { throw err }
         files.forEach(function (bang, i) {
 
-            fs.appendFile("bigBangEpisodes.json", `{"episode":"${bigBang}/${bang}"}, \n`, (err) => {
+            fs.appendFileSync("bigBangEpisodes.json", `{"episode":"${bigBang}/${bang}"}, \n`, (err) => {
                 if (err) throw err
             })
         })
@@ -36,7 +36,7 @@ function makeJson() {
     fs.readdir(office, (err, files) => {
         if (err) { throw err }
         files.forEach(function (jims, i) {
-            fs.appendFile("officeEpisodes.json", `{"episode":"${office}/${jims}"}, \n`, (err) => {
+            fs.appendFileSync("officeEpisodes.json", `{"episode":"${office}/${jims}"}, \n`, (err) => {
                 if (err) throw err
             })
         })
@@ -44,27 +44,22 @@ function makeJson() {
 }
 
 
-
 for (i = 0; i < friendsEpisodes.length; i++) {
-    if (friendsEpisodes[i].episode == undefined ) {
+    if (friendsEpisodes[i] == undefined) {
         continue
-    }else if (friendsEpisodes[i].episode != undefined && friendsEpisodes[i].episode.includes("friends_")) {
+    } else if (friendsEpisodes[i].episode != undefined && friendsEpisodes[i].episode.includes("friends_s01")) {
         console.log(friendsEpisodes[i].episode)
     };
-    if (bigEpisodes[i].episode == undefined) {
+    if (bigEpisodes[i] == undefined) {
         continue
-    } else if (bigEpisodes[i].episode != undefined && bigEpisodes[i].episode.includes("friends_")) {
+    } else if (bigEpisodes[i].episode != undefined && bigEpisodes[i].episode.includes("The")) {
         console.log(bigEpisodes[i].episode)
     };
-    if (officeEpisodes[i].episode == undefined) {
+    if (officeEpisodes[i] == undefined || officeEpisodes[i].episode == undefined) {
         continue
-    } else if (officeEpisodes[i].episode != undefined && officeEpisodes[i].episode.includes("friends_")) {
+    } else if (officeEpisodes[i].episode != undefined && officeEpisodes[i].episode.includes("The")) {
         console.log(officeEpisodes[i].episode)
     };
-
-
-
-
 }
 
 
