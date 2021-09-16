@@ -1,0 +1,16 @@
+.temps{
+    margin-top: -1rem;
+    display: inline-block !important;
+}
+
+#weatherIcon{
+   margin-left: 30%;
+}
+
+.card-title{
+    margin-bottom: -1.5rem !important;
+}
+
+#joke{
+    font-size: large;
+}

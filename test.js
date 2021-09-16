@@ -339,18 +339,44 @@ const GetSum = (a, b) => {
 // console.log(getSum(-445, 175))
 // //-83835
 
-function zero(a, b) {return function(x){return(a(b(0)))}}
-function one(a, b){return function(x){return(a(b(1)))}}
+function zero(a, b) { return function (x) { return (a(b(0))) } }
+function one(a, b) { return function (x) { return (a(b(1))) } }
 
-function plus(c) {return + c}
+function plus(c) { return + c }
 
-console.log(zero(plus(one())))
+// console.log(zero(plus(one())))
 
+var paintLetterboxes = function (start, end) {
+    // a final count to be returned
+    let finalArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    // combine intigers into a string
+    let tempArr = ""
+    // push each integer to tempArray
+    for (let i = start; i < end + 1; i++) {
+        tempArr = tempArr + (i)
+    }
+    //loop through each count of finalArray
+    for (let i = 0; i < finalArray.length; i++) {
+        //second loop to compare values of TempArr
+        for (let j = 0; j < tempArr.length; j++) {
+            // console.log(finalArray[i])
 
-document.getElementById("button").addEventListener("click", () => {
+        // compare current temp array to current count, 
+            if (tempArr[j] == i) {
+                //increment final array count 
+                finalArray[i] = finalArray[i] + 1
+            }
 
-})
+        }
 
-document.getElementById("butotn").click(() =>{
-    
-})
+    }
+    console.log(finalArray)
+    // Your code here
+    return finalArray
+}
+
+function digits(num){
+
+}
+
+console.log(digits(156))

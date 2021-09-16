@@ -1,16 +1,14 @@
-const submit = document.getElementsByClassName(`submit`)
+const drag = document.querySelector("#drag")
+var div = document.getElementById('move');
+var div2 = document.getElementById('move2');
 
-const input = document.getElementById(`input`)
+let move = false
 
-const toDoList = document.getElementById(`toDoList`)
+window.addEventListener("mousedown", (e) => {
+    move = true
 
-const move = () => {
-   
-    var li = document.createElement("li");
-    var node = document.createTextNode(input.value);
-    var button = document.createElement("button")
-    button.innerText = "In Progress"
-    li.appendChild(node);
-    li.appendChild(button)
-    toDoList.appendChild(li);
-}
+    drag.style.left = e.pageX+"px" 
+
+    div2.style.maxWidth = (e.pageX - 955) +"px"
+})
+
