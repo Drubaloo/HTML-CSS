@@ -361,7 +361,7 @@ var paintLetterboxes = function (start, end) {
         for (let j = 0; j < tempArr.length; j++) {
             // console.log(finalArray[i])
 
-        // compare current temp array to current count, 
+            // compare current temp array to current count, 
             if (tempArr[j] == i) {
                 //increment final array count 
                 finalArray[i] = finalArray[i] + 1
@@ -375,8 +375,42 @@ var paintLetterboxes = function (start, end) {
     return finalArray
 }
 
-function digits(num){
+function accum(s) {
+    //set variables to split the initial string and store future words
+    var letters = s.split(''), words = [];
 
+    //loop through the string
+    for (var i = 0; i < letters.length; i++) {
+        // capitalize the first letter in the string, and then add an array equal to the length of i + 1, then join each item in the array with a lowercase letter at i
+        words.push(letters[i].toUpperCase() + Array(i + 1).join(letters[i].toLowerCase()));
+    }
+    //join on -
+    return words.join('-');
 }
 
-console.log(digits(156))
+function solution(number) {
+    // create a variable to hold current sum
+    var sum = 0;
+
+    //iterate through each integer less than total
+    for (var i = 1; i < number; i++) {
+        //if number is divisible by 3 or 5 increase sum by that number
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i
+        }
+    }
+    // return sum total
+    return sum;
+}
+
+function digital_root(n) {
+
+    //result will start at 0, converting n into a string and splitting it, then mapping through and converting each item in the arrat into a number, at the same time adding the number to the result
+
+    let result = 0; String(n).split('').map(num => {
+        result += Number(num);
+    }); return result >= 10 ? digital_root(result) : result;
+}
+
+
+console.log(digital_root(10))
