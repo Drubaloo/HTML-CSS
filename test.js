@@ -412,5 +412,10 @@ function digital_root(n) {
     }); return result >= 10 ? digital_root(result) : result;
 }
 
+var moveZeros = function (arr) {
+    var filtedList = arr.filter(function (num){return num !== 0;});
+  var zeroList = arr.filter(function (num){return num === 0;});
+  return filtedList.concat(zeroList);
+}
 
-console.log(digital_root(10))
+console.log(moveZeros(["a","b",null,"c","d",1,1,3,1,9,{},9,0,0,0,0,0,0,0,0,0,0]))
