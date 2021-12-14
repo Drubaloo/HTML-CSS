@@ -413,9 +413,21 @@ function digital_root(n) {
 }
 
 var moveZeros = function (arr) {
-    var filtedList = arr.filter(function (num){return num !== 0;});
-  var zeroList = arr.filter(function (num){return num === 0;});
-  return filtedList.concat(zeroList);
+    var filtedList = arr.filter(function (num) { return num !== 0; });
+    var zeroList = arr.filter(function (num) { return num === 0; });
+    return filtedList.concat(zeroList);
 }
 
-console.log(moveZeros(["a","b",null,"c","d",1,1,3,1,9,{},9,0,0,0,0,0,0,0,0,0,0]))
+//reverse any word in a string that is more than 5 characters long
+function spinWords(string) {
+    let temp = []
+    string.split(" ").forEach(index => {
+        if (index.length > 4) {
+            temp.push(index.split("").reverse().join(""))
+        } else temp.push(index)
+    })
+
+    return temp.join(" ")
+}
+
+console.log(spinWords("Hey fellow warriors"))
