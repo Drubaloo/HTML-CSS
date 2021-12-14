@@ -430,4 +430,20 @@ function spinWords(string) {
     return temp.join(" ")
 }
 
-console.log(spinWords("Hey fellow warriors"))
+function arrayDiff(a, b) {
+    //create empty arry - redundant
+    let result = []
+    //manually filter everything from a && push to result - repetetive
+    a.forEach(index => {
+        if (!b.includes(index)){
+            result.push(index)
+        }
+    })
+  return (result)
+}
+//super better way -- even readable
+function array_diff(a, b) {
+    return a.filter(e => !b.includes(e));
+  }
+
+console.log(arrayDiff([1,2,3], [1,2]))
