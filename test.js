@@ -435,15 +435,31 @@ function arrayDiff(a, b) {
     let result = []
     //manually filter everything from a && push to result - repetetive
     a.forEach(index => {
-        if (!b.includes(index)){
+        if (!b.includes(index)) {
             result.push(index)
         }
     })
-  return (result)
+    return (result)
 }
 //super better way -- even readable
 function array_diff(a, b) {
     return a.filter(e => !b.includes(e));
+}
+
+function likes(names) {
+    names = names || []
+    switch (names.length) {
+      case 0:
+        return 'no one likes this'
+      case 1:
+        return `${names[0]} likes this`
+      case 2:
+        return `${names[0]} and ${names[1]} like this`
+      case 3:
+        return `${names[0]}, ${names[1]} and ${names[2]} like this`
+      default:
+        return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+    }
   }
 
-console.log(arrayDiff([1,2,3], [1,2]))
+console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']))
